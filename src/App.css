@@ -1,8 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  background-color: #222629;
   color: #6b6e70;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px #6699cc;
+  border-radius: 10px;
+}
+
+li {
+  text-align: center;
+  padding: 2px;
+}
+li:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px #6699cc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 0.4s;
 }

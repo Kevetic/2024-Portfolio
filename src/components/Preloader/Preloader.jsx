@@ -1,19 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { delay, easeIn, motion, useAnimate } from "framer-motion";
 
-const defaultState = {
-  hidden: {
-    opacity: 0,
-    y: -20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-  },
-};
 const preloadArray = ["Unyielding", "Imaginative", "Uplifting", "Xpressional"];
 
-export default function Preloader({ setIsLoading }) {
+export default function Preloader({ setIsLoading, defaultState }) {
   const [scope, animate] = useAnimate();
   const [removeSpace, setRemoveSpace] = useState(false);
 
@@ -21,16 +11,14 @@ export default function Preloader({ setIsLoading }) {
     myAnimation({ setIsLoading });
     setTimeout(() => {
       setIsLoading(false);
-    }, 8800);
+    }, 7000);
   }, []);
 
   async function myAnimation({ setIsLoading }) {
-    await animate(scope.current, { rotate: 45 });
-    await animate(scope.current, { rotate: -45 });
     await animate(scope.current, { scale: 1.5 });
     await animate(scope.current, { rotate: 0 });
     await animate(scope.current, { scale: 1 });
-    await animate("span", { scale: 2, color: "#86C232", x: -10 }, { delay: 1 });
+    await animate("span", { scale: 2, color: "#6699CC", x: -10 }, { delay: 1 });
     await animate(
       "h1",
       { opacity: 0 },
@@ -51,21 +39,21 @@ export default function Preloader({ setIsLoading }) {
     animate(
       scope.current,
       { x: -2000 },
-      { delay: 2.5 },
-      { transition: "linear" }
+      { delay: 4 },
+      { transition: "linear" },
+      setRemoveSpace(true)
     );
-    setRemoveSpace(true);
   }
 
   return (
     <motion.div
       initial={{ x: 0, opacity: 1 }}
       animate={{ x: -2000, opacity: 0 }}
-      transition={{ duration: 3, delay: 7 }}
-      className={`flex absolute justify-evenly items-center w-screen h-screen bg-off-gray`}
+      transition={{ duration: 3, delay: 4 }}
+      className={`flex absolute justify-evenly items-center w-screen h-screen `}
     >
       <motion.div
-        className="flex justify-evenly items-center text-4xl bg-transparent w-screen"
+        className="flex justify-evenly items-center text-4xl  w-screen"
         ref={scope}
         initial="hidden"
         animate="visible"
@@ -76,12 +64,10 @@ export default function Preloader({ setIsLoading }) {
             let firstLetter = item.split("");
             let remaining = firstLetter.splice(1);
             return (
-              <div className="flex bg-transparent">
-                <span className="flex z-10 bg-transparent">
-                  {firstLetter[0]}
-                </span>
+              <div className="flex ">
+                <span className="flex z-10">{firstLetter[0]}</span>
                 <motion.h1
-                  className="bg-transparent"
+                  className=""
                   variants={defaultState}
                   transition={{
                     duration: 0.4,
@@ -93,12 +79,18 @@ export default function Preloader({ setIsLoading }) {
               </div>
             );
           })}
-          {removeSpace && <span className="absolute bg-transparent">/</span>}
+          {removeSpace && <span className="absolute ">/</span>}
           {removeSpace && (
             <motion.span
-              className="absolute top-3/4 text-4xl bg-transparent"
-              initial={{ opacity: 0, scale: 1.5 }}
-              animate={{ opacity: 1 }}
+              className="absolute top-3/4 text-4xl "
+              initial={{ opacity: 0, scale: 1, y: 0 }}
+              animate={{
+                opacity: 1,
+                scale: 1.5,
+                y: 75,
+                duration: 2,
+                transition: "linear",
+              }}
             >
               Developer
             </motion.span>

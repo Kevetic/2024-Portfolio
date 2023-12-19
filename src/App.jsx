@@ -2,14 +2,49 @@ import React, { useEffect, useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Nav from "./components/Nav/Nav";
 import "./App.css";
+import Sphere from "./components/Sphere/Sphere";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { CiMail } from "react-icons/ci";
+
+const defaultState = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div>
-      {isLoading && <Preloader setIsLoading={setIsLoading} />}
-      {!isLoading && <Nav />}
-    </div>
+    <>
+      <div className="bg-bg-pic bg-no-repeat bg-fixed">
+        {/* {isLoading ? (
+          <Preloader setIsLoading={setIsLoading} defaultState={defaultState} />
+        ) : ( */}
+        <>
+          <div className="flex fixed m-10 gap-5 fixed z-10 contact-icons">
+            <a href="https://github.com/Kevetic" target="_blank">
+              <FaGithub size={50} />
+            </a>
+            <a href="https://www.linkedin.com/in/kevetic/" target="_blank">
+              <FaLinkedin size={50} />
+            </a>
+            <a href="mailto:kevetic@outlook.com">
+              <CiMail size={50} />
+            </a>
+          </div>
+          <Nav defaultState={defaultState} />
+          <div className="fixed top-5 right-0 flex justify-center items-center h-2/5 w-2/5">
+            <Sphere arg={[1, 64, 64]} />
+          </div>
+        </>
+        {/* )} */}
+      </div>
+    </>
   );
 }
