@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Nav from "./components/Nav/Nav";
-import "./App.css";
 import Sphere from "./components/Sphere/Sphere";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
+import AboutMe from "./components/AboutMe/AboutMe";
+import Projects from "./components/Projects/Projects";
+import "./App.css";
 
 const defaultState = {
   hidden: {
@@ -16,6 +18,12 @@ const defaultState = {
     y: 0,
   },
 };
+
+const navigation = [
+  { id: 1, title: "About Me", comp: <AboutMe defaultState={defaultState} /> },
+  { id: 2, title: "Projects", comp: <Projects /> },
+  { id: 3, title: "Contact Me" },
+];
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,8 +46,8 @@ export default function App() {
               <CiMail size={50} />
             </a>
           </div>
-          <Nav defaultState={defaultState} />
-          <div className="fixed top-5 right-0 flex justify-center items-center h-2/5 w-2/5">
+          <Nav defaultState={defaultState} navigation={navigation} />
+          <div className="fixed top-72 right-32 flex justify-center items-center h-2/6 w-1/6">
             <Sphere arg={[1, 64, 64]} />
           </div>
         </>

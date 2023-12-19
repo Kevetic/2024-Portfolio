@@ -1,21 +1,32 @@
 import React from "react";
 import { Link } from "react-scroll";
 import AboutMe from "../AboutMe/AboutMe";
+import Projects from "../Projects/Projects";
+import ContactMe from "../ContactMe/ContactMe";
 
-const navigation = [
-  { id: 1, title: "About Me" },
-  { id: 2, title: "Projects" },
-  { id: 3, title: "Contact Me" },
-];
-
-export default function Nav({ defaultState }) {
+const handleClick = (id) => {
+  navigation.map((item, idx) => {
+    if (idx == id && id == 1) {
+      return item.comp;
+    } else if (idx == id && id == 2) {
+      return item.comp;
+    }
+  });
+};
+export default function Nav({ navigation }) {
   return (
     <>
       <nav className="flex flex-col space-y-5 sticky top-1/4 list-none p-5  w-fit z-10">
-        {navigation.map((item) => {
+        {navigation.map((item, idx) => {
           return (
-            <li>
-              <Link to={item.title} smooth={true} offset={0} duration={500}>
+            <li key={idx}>
+              <Link
+                id={idx}
+                to={item.title}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
                 {item.title}
               </Link>
             </li>
@@ -23,14 +34,15 @@ export default function Nav({ defaultState }) {
         })}
       </nav>
       <div>
-        {navigation.map((item) => {
-          return (
-            <div className="w-screen h-screen">
-              <h1 id={`${item.title}`}></h1>
-              <AboutMe defaultState={defaultState} />
-            </div>
-          );
-        })}
+        <div id={`About Me`} className="w-screen h-screen">
+          <AboutMe />
+        </div>
+        <div id={`Projects`} className="w-screen h-screen">
+          <Projects />
+        </div>
+        <div id={`Contact Me`} className="w-screen h-screen">
+          <ContactMe />
+        </div>
       </div>
     </>
   );

@@ -61,10 +61,13 @@ useGLTF.preload("/scene.gltf");
 
 export default function Sphere() {
   return (
-    <Canvas camera={{ position: [3, 3], zoom: 1 }}>
+    <Canvas camera={{ position: [3, 3, 0], zoom: 1 }}>
       <Suspense fallback={null}>
-        <ambientLight intensity={0.1} />
-        <directionalLight intensity={1.5} position={[1, 0, -0.25]} />
+        <directionalLight
+          intensity={0.5}
+          position={[0, -1, 0]}
+          castShadow={false}
+        />
         <Stage>
           <mesh>
             <Model />
