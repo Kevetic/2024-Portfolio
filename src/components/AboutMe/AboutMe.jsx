@@ -5,28 +5,6 @@ import { FaCss3, FaHtml5, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import "./AboutMe.css";
 
-const renderProfiledPicture = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 3 }}
-    >
-      <Avatar
-        className="profile-picture grayscale"
-        alt="Profile Picture"
-        src="photo.png"
-        sx={{
-          width: 200,
-          height: 200,
-          margin: "auto",
-          opacity: "0.7",
-        }}
-      />
-    </motion.div>
-  );
-};
-
 const icons = [
   <FaCss3 size="50" />,
   <FaHtml5 size="50" />,
@@ -39,19 +17,35 @@ const icons = [
 const renderSummary = ({ defaultState }) => {
   return (
     <>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 3 }}
+      >
+        <Avatar
+          className="profile-picture grayscale"
+          alt="Profile Picture"
+          src="photo.png"
+          sx={{
+            width: 200,
+            height: 200,
+            margin: "auto",
+            opacity: "0.9",
+          }}
+        />
+      </motion.div>
       <motion.h1
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ staggerChildren: 0.3 }}
-        className="m-5 text-white text-2xl"
+        whileInView={{ opacity: 1 }}
+        className="m-5 text-span-blue text-2xl"
       >
         About Me
       </motion.h1>
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        whileInView={{ opacity: 1 }}
         transition={{ duration: 5 }}
-        className="text-main-gray relative z-10 text-lg about-text"
+        className=" relative z-10 text-lg about-text"
       >
         With over 4 years of professional experience, I am a{" "}
         <span>dedicated</span> developer specializing in front-end development
@@ -68,7 +62,7 @@ const renderSummary = ({ defaultState }) => {
       </motion.div>
       <motion.div
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
         transition={{ staggerChildren: 0.3 }}
         className="flex justify-evenly mt-8"
       >
@@ -95,7 +89,6 @@ const renderSummary = ({ defaultState }) => {
 export default function AboutMe({ defaultState }) {
   return (
     <div className="w-1/2 m-auto text-center relative top-48">
-      {renderProfiledPicture()}
       {renderSummary({ defaultState })}
     </div>
   );

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 * {
-  color: #6b6e70;
+  color: black;
   font-family: "Poppins", sans-serif;
 }
 
@@ -25,4 +25,14 @@ li:hover {
   cursor: pointer;
   transition: ease-in-out;
   transition-duration: 0.4s;
+}
+
+.project-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px #6699cc;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #222629;
 }

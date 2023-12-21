@@ -1,0 +1,28 @@
+.navbar-item {
+  transition: ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-item::after {
+  display: flex;
+  content: "";
+  background-color: #6699cc;
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+  margin-left: 10px;
+}
+
+@keyframes ping {
+  50% {
+    opacity: 0.3;
+  }
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

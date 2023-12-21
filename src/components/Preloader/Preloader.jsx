@@ -8,13 +8,13 @@ export default function Preloader({ setIsLoading, defaultState }) {
   const [removeSpace, setRemoveSpace] = useState(false);
 
   useEffect(() => {
-    myAnimation({ setIsLoading });
+    myAnimation();
     setTimeout(() => {
       setIsLoading(false);
     }, 7000);
   }, []);
 
-  async function myAnimation({ setIsLoading }) {
+  async function myAnimation() {
     await animate(scope.current, { scale: 1.5 });
     await animate(scope.current, { rotate: 0 });
     await animate(scope.current, { scale: 1 });
@@ -48,12 +48,12 @@ export default function Preloader({ setIsLoading, defaultState }) {
   return (
     <motion.div
       initial={{ x: 0, opacity: 1 }}
-      animate={{ x: -2000, opacity: 0 }}
+      animate={{ opacity: 0 }}
       transition={{ duration: 3, delay: 4 }}
       className={`flex absolute justify-evenly items-center w-screen h-screen `}
     >
       <motion.div
-        className="flex justify-evenly items-center text-4xl  w-screen"
+        className="flex justify-evenly items-center text-4xl w-screen"
         ref={scope}
         initial="hidden"
         animate="visible"
