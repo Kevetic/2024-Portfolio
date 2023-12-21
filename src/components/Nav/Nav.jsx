@@ -18,7 +18,7 @@ export default function Nav({ navigation, defaultState }) {
   const projectArray = [
     {
       projectName: "Quinns Plastic Surgery",
-      image: "/QPS.JPG",
+      image: "./QPS.JPG",
       challenges:
         "This marked one of my initial professional projects, built entirely from the ground up. The excitement and pressure to meet expectations were intense. Being the sole team member on this small project, I had to balance both client communication and ensuring timely project delivery.",
       summary:
@@ -34,7 +34,7 @@ export default function Nav({ navigation, defaultState }) {
     },
     {
       projectName: "Make 48 Challenge",
-      image: "/M48.JPG",
+      image: "./M48.JPG",
       challenges:
         "We took over this project from an overseas team, and around the halfway mark, the client requested us to abandon the existing work and start afresh to meet their deadlines. I had to thoroughly assess and outline each section of the project during the restart. It presented a challenge, but it was an enjoyable experience overall.",
       summary:

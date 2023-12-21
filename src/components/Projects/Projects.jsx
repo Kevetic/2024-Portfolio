@@ -16,7 +16,7 @@ export default function Projects() {
   const projectArray = [
     {
       projectName: "Shoe Customization",
-      image: "/CUSTOM.JPG",
+      image: "./CUSTOM.JPG",
       summary:
         "This served as a personal endeavor for me, driven by the desire to delve into learning React Three Fiber. It involves the integration of four controllable GLTF models, allowing users to select real-world models and render them on the screen.",
       challenges: "",
@@ -26,7 +26,7 @@ export default function Projects() {
     },
     {
       projectName: "Trending Movies",
-      image: "/MovieWatch.JPG",
+      image: "./MovieWatch.JPG",
       summary:
         "I created a React app with a mobile-first approach that utilizes an API to fetch the latest trending movies and television shows. The app covers content currently in theaters as well as popular streaming platforms. This project served as a valuable exercise for me, allowing me to gain experience in working with APIs and developing a mobile-first application.",
       challenges: "",
@@ -36,7 +36,7 @@ export default function Projects() {
     },
     {
       projectName: "Shoe Customization",
-      image: "/CARD.jpg",
+      image: "./CARD.jpg",
       summary:
         "This React game is a simple memory game, designed to help me warm up my gaming logic skills. It served as a starting point for me as I began to explore React Three for animations and brainstorm ideas for a more complex and potentially longer project.",
       challenges: "",
