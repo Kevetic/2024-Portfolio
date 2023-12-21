@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Nav from "./components/Nav/Nav";
-import Sphere from "./components/Sphere/Sphere";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { motion } from "framer-motion";
@@ -19,8 +18,10 @@ const defaultState = {
 };
 
 const navigation = [
-  { id: 1, title: "About Me" },
-  { id: 2, title: "Projects" },
+  { id: 1, title: "About Me", linkTitle: "About Me" },
+  { id: 3, title: "QPS", linkTitle: "Quinns Plastic Surgery" },
+  { id: 4, title: "M48", linkTitle: "Make 48 Challenge" },
+  { id: 2, title: "Personals", linkTitle: "Projects" },
 ];
 
 export default function App() {
@@ -44,9 +45,6 @@ export default function App() {
             </a>
           </div>
           <Nav defaultState={defaultState} navigation={navigation} />
-          {/* <div className="fixed top-72 right-32 flex justify-center items-center h-full w-full -z-10">
-            <Sphere arg={[1, 64, 64]} />
-          </div> */}
         </>
       )}
     </motion.div>

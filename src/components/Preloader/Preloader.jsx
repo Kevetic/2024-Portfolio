@@ -11,7 +11,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
     myAnimation();
     setTimeout(() => {
       setIsLoading(false);
-    }, 7000);
+    }, 6500);
   }, []);
 
   async function myAnimation() {

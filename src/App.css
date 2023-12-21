@@ -14,19 +14,6 @@
   border-radius: 10px;
 }
 
-li {
-  text-align: center;
-  padding: 2px;
-}
-li:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 1px 3px #6699cc;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: ease-in-out;
-  transition-duration: 0.4s;
-}
-
 .project-icons a:hover {
   transform: scale(1.1);
   box-shadow: 1px 1px 3px #6699cc;
@@ -35,4 +22,14 @@ li:hover {
 
 input {
   background-color: #222629;
+}
+
+.project-link:hover {
+  color: #cc6633;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px #cc6633;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition-duration: 0.4s;
 }
