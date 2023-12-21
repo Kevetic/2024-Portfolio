@@ -53,7 +53,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
       className={`flex absolute justify-evenly items-center w-screen h-screen `}
     >
       <motion.div
-        className="flex justify-evenly items-center text-4xl w-screen"
+        className="flex justify-evenly items-center text-4xl w-screen md:flex-row flex-col"
         ref={scope}
         initial="hidden"
         animate="visible"
@@ -64,7 +64,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
             let firstLetter = item.split("");
             let remaining = firstLetter.splice(1);
             return (
-              <div className="flex ">
+              <div className="flex m-12 md:m-0 text-left">
                 <span className="flex z-10">{firstLetter[0]}</span>
                 <motion.h1
                   className=""
@@ -79,7 +79,6 @@ export default function Preloader({ setIsLoading, defaultState }) {
               </div>
             );
           })}
-          {removeSpace && <span className="absolute ">/</span>}
           {removeSpace && (
             <motion.span
               className="absolute top-3/4 text-4xl "

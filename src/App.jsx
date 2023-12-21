@@ -33,15 +33,15 @@ export default function App() {
         <Preloader setIsLoading={setIsLoading} defaultState={defaultState} />
       ) : (
         <>
-          <div className="flex fixed m-10 gap-5 fixed z-10 contact-icons">
+          <div className="flex fixed md:m-10 gap-5 fixed z-10 contact-icons bottom-10 right-10">
             <a href="https://github.com/Kevetic" target="_blank">
-              <FaGithub size={40} />
+              <FaGithub size={25} />
             </a>
             <a href="https://www.linkedin.com/in/kevetic/" target="_blank">
-              <FaLinkedin size={40} />
+              <FaLinkedin size={25} />
             </a>
             <a href="mailto:kevetic@outlook.com">
-              <CiMail size={40} />
+              <CiMail size={25} />
             </a>
           </div>
           <Nav defaultState={defaultState} navigation={navigation} />

@@ -30,55 +30,61 @@ export default function ProjectTemplate({ item }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
-      <div className="flex justify-around">
+      <div className="flex justify-around w-full flex-col m-auto">
         <a
           href={projectLink}
           target="_blank"
-          className="w-1/2 border border-main-orange rounded-lg p-2"
+          className="rounded-lg p-2 w-1/3 h-1/3 m-auto"
         >
           <img src={image} />
         </a>
-        <div className="w-5/12 space-y-4">
-          <h1 className="text-4xl">{projectName}</h1>
-          <div className="text-2xl space-y-32">
-            <span>Summary:</span> {summary}
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              transition={{ staggerChildren: 0.4 }}
-              className="flex justify-between items-center"
-            >
-              Tools:
-              {tools &&
-                tools.map((tools) => {
-                  return (
-                    <motion.span
-                      variants={defaultState}
-                      transition={{
-                        duration: 0.4,
-                        ease: "linear",
-                        type: "spring",
-                        damping: 12,
-                      }}
-                      className="gap-5"
-                    >
-                      {tools}
-                    </motion.span>
-                  );
-                })}
-            </motion.div>
-          </div>
+        <div className="w-11/12">
+          <h1
+            className="lg:text-4xl sm:text-md text-center text-main-orange mt-5"
+            text-xs
+          >
+            {projectName}
+          </h1>
+        </div>
+        <div className="sm:text-md text-xs lg:text-lg space-y-5 w-11/12 m-auto">
+          <span>Summary:</span> {summary}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            transition={{ staggerChildren: 0.4 }}
+            className="flex justify-evenly items-center text-span-blue"
+          >
+            Tools:
+            {tools &&
+              tools.map((tools) => {
+                return (
+                  <motion.span
+                    variants={defaultState}
+                    transition={{
+                      duration: 0.4,
+                      ease: "linear",
+                      type: "spring",
+                      damping: 12,
+                    }}
+                    className="gap-5"
+                  >
+                    {tools}
+                  </motion.span>
+                );
+              })}
+          </motion.div>
         </div>
       </div>
-      <div className="text-2xl space-y-10 m-auto w-11/12 mt-10">
+
+      <div className="sm:text-md text-xs lg:text-lg space-y-10 m-auto w-11/12 mt-10">
         <span>Challenges:</span> {challenges}
       </div>
-      <div className="text-2xl space-y-10 m-auto w-11/12 mt-10">
+      <div className="sm:text-md text-xs lg:text-lg space-y-10 m-auto w-11/12 mt-10">
         <span>Lessons:</span> {learned}
       </div>
-      <div className="text-center mt-20 text-2xl">
+      <div className="text-center md:mt-20 mt-10 sm:text-md text-xs lg:text-lg">
         <a href={projectLink} target="_blank">
-          <span className="border border-space-blue rounded-2xl p-2 project-link">
+          <span className="border border-space-blue rounded-lg p-2 project-link">
             LINK
           </span>
         </a>

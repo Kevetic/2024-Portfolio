@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
+import CUSTOM from "/CUSTOM.png";
+import MW from "/MW.png";
+import CARD from "/CARD.png";
 
 export default function Projects() {
   const defaultState = {
@@ -16,7 +19,7 @@ export default function Projects() {
   const projectArray = [
     {
       projectName: "Shoe Customization",
-      image: "./CUSTOM.JPG",
+      image: CUSTOM,
       summary:
         "This served as a personal endeavor for me, driven by the desire to delve into learning React Three Fiber. It involves the integration of four controllable GLTF models, allowing users to select real-world models and render them on the screen.",
       challenges: "",
@@ -26,7 +29,7 @@ export default function Projects() {
     },
     {
       projectName: "Trending Movies",
-      image: "./MovieWatch.JPG",
+      image: MW,
       summary:
         "I created a React app with a mobile-first approach that utilizes an API to fetch the latest trending movies and television shows. The app covers content currently in theaters as well as popular streaming platforms. This project served as a valuable exercise for me, allowing me to gain experience in working with APIs and developing a mobile-first application.",
       challenges: "",
@@ -36,7 +39,7 @@ export default function Projects() {
     },
     {
       projectName: "Shoe Customization",
-      image: "./CARD.jpg",
+      image: CARD,
       summary:
         "This React game is a simple memory game, designed to help me warm up my gaming logic skills. It served as a starting point for me as I began to explore React Three for animations and brainstorm ideas for a more complex and potentially longer project.",
       challenges: "",
@@ -104,14 +107,14 @@ export default function Projects() {
             </div>
           </motion.div>
         ))}
+        <a
+          href="https://github.com/Kevetic"
+          target="_blank"
+          className="z-50 text-lg text-span-blue underline w-full m-auto text-center"
+        >
+          Find more of my projects on my GitHub
+        </a>
       </div>
-      <a
-        href="https://github.com/Kevetic"
-        target="_blank"
-        className="absolute bottom-96 z-50 text-lg text-span-blue underline"
-      >
-        MORE...
-      </a>
     </motion.div>
   );
 }
