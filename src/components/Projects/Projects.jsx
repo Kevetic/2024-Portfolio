@@ -38,7 +38,7 @@ export default function Projects() {
       github: "https://github.com/Kevetic/movie-watchlist",
     },
     {
-      projectName: "Shoe Customization",
+      projectName: "Uzumaki Memory Game",
       image: CARD,
       summary:
         "This React game is a simple memory game, designed to help me warm up my gaming logic skills. It served as a starting point for me as I began to explore React Three for animations and brainstorm ideas for a more complex and potentially longer project.",
@@ -73,7 +73,9 @@ export default function Projects() {
               alt={project.name}
               className="w-full h-40 object-cover rounded-lg"
             />
-            <span className="text-lg font-semibold my-2">{project.name}</span>
+            <span className="text-lg font-semibold my-2">
+              {project.projectName}
+            </span>
 
             <div className="drawer flex flex-col items-center">
               <div className="my-1 h-64">{project.summary}</div>
