@@ -3,6 +3,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CUSTOM from "/CUSTOM.png";
 import MW from "/MW.png";
+import H2R from "/H2R.png";
 import CARD from "/CARD.png";
 
 export default function Projects() {
@@ -38,14 +39,14 @@ export default function Projects() {
       github: "https://github.com/Kevetic/movie-watchlist",
     },
     {
-      projectName: "Uzumaki Memory Game",
-      image: CARD,
+      projectName: "Kawasaki Moto Page",
+      image: H2R,
       summary:
-        "This React game is a simple memory game, designed to help me warm up my gaming logic skills. It served as a starting point for me as I began to explore React Three for animations and brainstorm ideas for a more complex and potentially longer project.",
+        "I created this modest project to hone my skills in routing and explore the interplay between a minimalist design, React, and Tailwind CSS. Inspired by my passion for motorcycles, the project interacts with a basic API related to Kawasaki. It retrieves and showcases information about the selected item while intelligently filtering out any duplicates from the API.",
       challenges: "",
       learned: "",
-      projectLink: "https://kevetic.github.io/memory-game/",
-      github: "https://github.com/Kevetic/memory-game/",
+      projectLink: "https://kevetic.github.io/moto-page/#/Landing",
+      github: "https://github.com/Kevetic/moto-page",
     },
   ];
   return (
@@ -66,21 +67,21 @@ export default function Projects() {
               type: "spring",
               damping: 12,
             }}
-            className="border border-main-gray rounded-lg flex flex-col overflow-hidden text-left p-2  relative items-center"
+            className=" rounded-lg flex flex-col overflow-hidden text-left p-2 relative items-center shadow shadow-border rounded-lg bg-gradient-to-r from-border to-background"
           >
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-40 object-cover rounded-lg"
+              className="w-full h-40 object-cover rounded-lg shadow shadow-border rounded-lg bg-gradient-to-r from-border to-background"
             />
             <span className="text-lg font-semibold my-2">
               {project.projectName}
             </span>
 
-            <div className="drawer flex flex-col items-center">
+            <div className="drawer flex flex-col items-center text-xs lg:text-base">
               <div className="my-1 h-64">{project.summary}</div>
               <div className="flex justify-around w-full absolute bottom-0 items-center">
-                <button className="flex justify-evenly items-center w-1/3 border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-span-blue hover:shadow m-1">
+                <button className="flex justify-evenly items-center w-1/3 border border-border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-border hover:shadow m-1">
                   <a
                     href={project.projectLink}
                     target="_blank"
@@ -93,7 +94,7 @@ export default function Projects() {
                 </button>
 
                 {project.github && (
-                  <button className="flex justify-evenly items-center w-1/3 border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-span-blue hover:shadow m-1">
+                  <button className="flex justify-evenly items-center w-1/3 border border-border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-border hover:shadow m-1">
                     <a
                       href={project.github}
                       target="_blank"

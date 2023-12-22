@@ -25,34 +25,34 @@ export default function ProjectTemplate({ item }) {
 
   return (
     <motion.div
-      className="w-10/12 relative"
+      className="w-10/12 p-5 h-fit shadow shadow-border rounded-lg bg-gradient-to-r from-border to-background"
       initial={{ opacity: 0, y: -75 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 2 }}
     >
-      <div className="flex justify-around w-full flex-col m-auto">
+      <div className="w-11/12">
+        <h1
+          className="lg:text-4xl sm:text-md text-center text-foreground mb-5"
+          text-xs
+        >
+          {projectName}
+        </h1>
+      </div>
+      <div className="flex justify-around w-full flex-col m-auto ">
         <a
           href={projectLink}
           target="_blank"
-          className="rounded-lg p-2 w-1/3 h-1/3 m-auto"
+          className="rounded-lg p-2 w-1/2 h-1/2 m-auto"
         >
           <img src={image} />
         </a>
-        <div className="w-11/12">
-          <h1
-            className="lg:text-4xl sm:text-md text-center text-main-orange mt-5"
-            text-xs
-          >
-            {projectName}
-          </h1>
-        </div>
-        <div className="sm:text-md text-xs lg:text-lg space-y-5 w-11/12 m-auto">
+        <div className="sm:text-md text-xs lg:text-lg space-y-5 w-11/12 m-auto mt-5">
           <span>Summary:</span> {summary}
           <motion.div
             initial="hidden"
             whileInView="visible"
             transition={{ staggerChildren: 0.4 }}
-            className="flex justify-evenly items-center text-span-blue"
+            className="flex justify-evenly items-center text-foreground"
           >
             Tools:
             {tools &&
@@ -66,7 +66,7 @@ export default function ProjectTemplate({ item }) {
                       type: "spring",
                       damping: 12,
                     }}
-                    className="gap-5"
+                    className="gap-5 project-tools"
                   >
                     {tools}
                   </motion.span>

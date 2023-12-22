@@ -28,7 +28,7 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <motion.div className=" bg-no-repeat bg-fixed">
+    <motion.div className="bg-background">
       {isLoading ? (
         <Preloader setIsLoading={setIsLoading} defaultState={defaultState} />
       ) : (

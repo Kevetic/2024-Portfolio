@@ -38,11 +38,11 @@ export default function Nav({ navigation, defaultState }) {
       projectName: "Make 48 Challenge",
       image: M48,
       challenges:
-        "We took over this project from an overseas team, and around the halfway mark, the client requested us to abandon the existing work and start afresh to meet their deadlines. I had to thoroughly assess and outline each section of the project during the restart. It presented a challenge, but it was an enjoyable experience overall.",
+        "We took over this project from an overseas team, and around the halfway mark, the client requested us to abandon the existing work and start afresh to meet their deadlines. I had to thoroughly assess and outline each section of the project during the restart.",
       summary:
         "I took on the responsibility of initiating a React project from the ground up, focusing on organizing challenges to be completed within a 48-hour timeframe. These challenges were hosted by Make 48, a local start up business. The events involved judging, and participants had the opportunity to win cash prizes.",
       learned:
-        "This marked my initial exposure to Tailwind, and I thoroughly enjoyed the experience, considering it as a game-changer. It provided me with the opportunity to delve into React at a much deeper level, gaining a comprehensive understanding of its intricacies, particularly in conjunction with context. Additionally, working with various clients allowed me to acquire valuable insights into different business aspects and the specific information required to successfully complete a project.",
+        "This marked my initial exposure to Tailwind, and I thoroughly enjoyed the experience, considering it as a game-changer. It provided me with the opportunity to delve into React at a much deeper level, gaining a comprehensive understanding of its intricacies, particularly in conjunction with context. ",
       projectLink: "https://48daychallenge.make48.com/",
       tools: [
         <ReactOriginal size={30} />,
@@ -55,7 +55,7 @@ export default function Nav({ navigation, defaultState }) {
 
   return (
     <>
-      <nav className="flex lg:flex-col lg:space-y-5 sticky justify-evenly lg:top-1/4 top-0 right-0 list-none p-5 w-full lg:w-fit z-50 bg-off-gray lg:bg-transparent">
+      <nav className="flex lg:flex-col lg:space-y-5 sticky justify-evenly lg:top-1/4 top-0 right-0 list-none p-5 w-full lg:w-fit z-50 bg-foreground lg:bg-transparent shadow shadow-border lg:shadow-transparent">
         {navigation.map((item, idx) => {
           return (
             <Link

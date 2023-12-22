@@ -18,7 +18,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
     await animate(scope.current, { scale: 1.5 });
     await animate(scope.current, { rotate: 0 });
     await animate(scope.current, { scale: 1 });
-    await animate("span", { scale: 2, color: "#6699CC", x: -10 }, { delay: 1 });
+    await animate("span", { scale: 2, color: "#512e2e", x: -10 }, { delay: 1 });
     await animate(
       "h1",
       { opacity: 0 },
@@ -50,7 +50,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
       initial={{ x: 0, opacity: 1 }}
       animate={{ opacity: 0 }}
       transition={{ duration: 3, delay: 4 }}
-      className={`flex absolute justify-evenly items-center w-screen h-screen `}
+      className={`flex absolute justify-evenly md:items-center items-baseline w-screen h-screen bg-background`}
     >
       <motion.div
         className="flex justify-evenly items-center text-4xl w-screen md:flex-row flex-col"

@@ -4,30 +4,33 @@
 @tailwind utilities;
 
 * {
-  color: black;
+  color: #dad8d8;
   font-family: "Poppins", sans-serif;
+  background: transparent;
 }
 
 .contact-icons a:hover {
   transform: scale(1.1);
-  box-shadow: 1px 1px 3px #6699cc;
+  box-shadow: 1px 1px 3px #111922;
   border-radius: 10px;
 }
 
 .project-icons a:hover {
   transform: scale(1.1);
-  box-shadow: 1px 1px 3px #6699cc;
+  box-shadow: 1px 1px 3px #111922;
   border-radius: 10px;
+  border: none;
+  outline: none;
 }
-
-input {
-  background-color: #222629;
+.project-tools {
+  box-shadow: 1px 1px 3px #111922;
+  border-radius: 5px;
 }
 
 .project-link:hover {
-  color: #cc6633;
+  color: #fafbfd;
   transform: scale(1.1);
-  box-shadow: 1px 1px 3px #cc6633;
+  box-shadow: 1px 1px 3px #111922;
   border-radius: 5px;
   cursor: pointer;
   transition: ease-in-out;

@@ -34,7 +34,7 @@ const renderSummary = ({ defaultState }) => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 5 }}
-          className="text-left md:text-base about-text text-xs overflow-scroll md:overflow-hidden h-48 md:h-fit"
+          className="text-left md:text-base about-text text-xs overflow-scroll md:overflow-hidden h-48 md:h-fit about-me"
         >
           With over 4 years of professional experience, I am a{" "}
           <span>dedicated</span> developer specializing in front-end development
@@ -64,7 +64,7 @@ const renderSummary = ({ defaultState }) => {
                   duration: 1,
                   ease: "anticipate",
                 }}
-                className="shadow-md shadow-main-orange rounded-lg"
+                className="shadow-md shadow-border rounded-lg"
               >
                 {icon}
               </motion.span>
