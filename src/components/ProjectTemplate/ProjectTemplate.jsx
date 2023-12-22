@@ -66,7 +66,7 @@ export default function ProjectTemplate({ item }) {
                       type: "spring",
                       damping: 12,
                     }}
-                    className="gap-5 project-tools"
+                    className="gap-5 project-tools shadow-md shadow-border rounded-md"
                   >
                     {tools}
                   </motion.span>
