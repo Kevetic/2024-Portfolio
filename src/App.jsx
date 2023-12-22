@@ -33,7 +33,7 @@ export default function App() {
         <Preloader setIsLoading={setIsLoading} defaultState={defaultState} />
       ) : (
         <>
-          <div className="flex fixed md:m-10 gap-5 fixed z-10 contact-icons bottom-10 right-10">
+          <div className="flex fixed md:m-10 gap-5 z-50 fixed contact-icons bottom-10 right-10 bg-transparent">
             <a href="https://github.com/Kevetic" target="_blank">
               <FaGithub size={25} />
             </a>
