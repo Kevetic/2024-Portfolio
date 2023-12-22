@@ -74,19 +74,19 @@ export default function Projects() {
               alt={project.name}
               className="w-full h-40 object-cover rounded-lg shadow shadow-border rounded-lg bg-gradient-to-r from-border to-background"
             />
-            <span className="text-lg font-semibold my-2">
+            <span className="text-lg font-semibold my-2 bg-transparent">
               {project.projectName}
             </span>
 
-            <div className="drawer flex flex-col items-center text-xs lg:text-base">
-              <div className="my-1 h-64">{project.summary}</div>
-              <div className="flex justify-around w-full absolute bottom-0 items-center">
+            <div className="drawer flex flex-col items-center text-xs lg:text-base bg-transparent">
+              <div className="my-1 h-64 bg-transparent">{project.summary}</div>
+              <div className="flex justify-around w-full absolute bottom-0 items-center bg-transparent">
                 <button className="flex justify-evenly items-center w-1/3 border border-border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-border hover:shadow m-1">
                   <a
                     href={project.projectLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex justify-center items-center gap-3"
+                    className="flex justify-center items-center gap-3 bg-transparent"
                   >
                     DEMO
                     <FaExternalLinkAlt />
@@ -99,7 +99,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex justify-center items-center gap-3"
+                      className="flex justify-center items-center gap-3 bg-transparent"
                     >
                       GITHUB
                       <FaGithub />

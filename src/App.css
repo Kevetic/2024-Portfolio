@@ -6,7 +6,7 @@
 * {
   color: #dad8d8;
   font-family: "Poppins", sans-serif;
-  background: transparent;
+  background: #1a1919;
 }
 
 .contact-icons a:hover {
@@ -35,4 +35,8 @@
   cursor: pointer;
   transition: ease-in-out;
   transition-duration: 0.4s;
+}
+
+span {
+  background-color: transparent;
 }

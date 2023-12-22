@@ -81,7 +81,7 @@ export default function Preloader({ setIsLoading, defaultState }) {
           })}
           {removeSpace && (
             <motion.span
-              className="absolute top-3/4 text-4xl "
+              className="absolute top-50% h-fit text-4xl "
               initial={{ opacity: 0, scale: 1, y: 0 }}
               animate={{
                 opacity: 1,

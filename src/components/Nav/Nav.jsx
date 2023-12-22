@@ -55,7 +55,7 @@ export default function Nav({ navigation, defaultState }) {
 
   return (
     <>
-      <nav className="flex lg:flex-col lg:space-y-5 sticky justify-evenly lg:top-1/4 top-0 right-0 list-none p-5 w-full lg:w-fit z-50 bg-foreground lg:bg-transparent shadow shadow-border lg:shadow-transparent">
+      <nav className="flex lg:flex-col lg:space-y-5 sticky justify-evenly lg:top-1/4 top-0 right-0 list-none p-5 w-full lg:w-fit z-50 bg-background lg:bg-transparent shadow shadow-border lg:shadow-transparent">
         {navigation.map((item, idx) => {
           return (
             <Link
