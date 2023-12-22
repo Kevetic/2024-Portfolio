@@ -82,9 +82,9 @@ export default function ProjectTemplate({ item }) {
       <div className="sm:text-md text-xs lg:text-lg space-y-10 m-auto w-11/12 mt-10 bg-transparent">
         <span>Lessons:</span> {learned}
       </div>
-      <div className="text-center md:mt-20 mt-10 sm:text-md text-xs lg:text-lg bg-transparent">
+      <div className="text-center md:mt-20 mt-10 sm:text-md text-xs lg:text-lg bg-transparent ">
         <a href={projectLink} target="_blank" className="bg-transparent">
-          <span className="border border-space-blue rounded-lg p-2 project-link ">
+          <span className="border border-space-blue rounded-lg p-2 flex justify-center items-center w-1/3 border border-border p-1 rounded-lg hover:scale-105 ease-in duration-200 hover:shadow-border hover:shadow m-auto">
             LINK
           </span>
         </a>
