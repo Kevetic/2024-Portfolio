@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { FaCss3, FaHtml5, FaReact, FaBootstrap } from "react-icons/fa";
 import { SiTailwindcss, SiJavascript } from "react-icons/si";
 import "./AboutMe.css";
-import photo from "/photo.png";
 
 const icons = [
   <FaCss3 size="40" />,
@@ -17,24 +16,12 @@ const icons = [
 const renderSummary = ({ defaultState }) => {
   return (
     <>
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 3 }}
-        className="w-1/2"
-      >
-        <img
-          src={photo}
-          alt="Profile Picture"
-          className="rounded-2xl grayscale opacity-90 shadow-2xl "
-        />
-      </motion.div>
-      <div className="w-1/2">
+      <div className="w-1/2 bg-transparent">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 5 }}
-          className="text-left md:text-base about-text text-xs overflow-y-scroll md:overflow-hidden h-48 md:h-fit about-me"
+          className="text-left md:text-base about-text text-xs overflow-y-scroll md:overflow-hidden h-48 md:h-fit bg-transparent about-me"
         >
           With over 4 years of professional experience, I am a{" "}
           <span>dedicated</span> developer specializing in front-end development
@@ -53,7 +40,7 @@ const renderSummary = ({ defaultState }) => {
           initial="hidden"
           whileInView="visible"
           transition={{ staggerChildren: 0.3 }}
-          className="justify-evenly md:mt-36 flex mt-0 absolute md:static -bottom-20 md:bottom-0 -left-2 md:left-0"
+          className="justify-evenly md:mt-36 flex mt-0 absolute md:static -bottom-20 md:bottom-0 -left-2 md:left-0 bg-transparent"
         >
           {icons.map((icon, idx) => {
             return (
@@ -78,7 +65,7 @@ const renderSummary = ({ defaultState }) => {
 
 export default function AboutMe({ defaultState }) {
   return (
-    <div className="w-10/12 m-auto text-center relative justify-center flex mt-10 lg:w-9/12 gap-5 items-cente md:items-none md:flex-row relative md:static">
+    <div className="w-10/12 m-auto text-center relative justify-center flex mt-10 lg:w-9/12 gap-5 items-cente md:items-none md:flex-row relative md:static p-10 rounded-lg shadow shadow-border rounded-lg bg-gradient-to-r from-border to-background">
       {renderSummary({ defaultState })}
     </div>
   );
