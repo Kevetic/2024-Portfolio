@@ -1,10 +1,8 @@
-import React from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 import { motion } from "framer-motion";
 import CUSTOM from "/CUSTOM.png";
 import MW from "/MW.png";
-import H2R from "/H2R.png";
-import CARD from "/CARD.png";
+import homeMart from "/homeMart.png";
 
 export default function Projects() {
   const defaultState = {
@@ -39,14 +37,14 @@ export default function Projects() {
       github: "https://github.com/Kevetic/movie-watchlist",
     },
     {
-      projectName: "Kawasaki Moto Page",
-      image: H2R,
+      projectName: "HomeMart",
+      image: homeMart,
       summary:
-        "I created this modest project to hone my skills in routing and explore the interplay between a minimalist design, React, and Tailwind CSS. Inspired by my passion for motorcycles, the project interacts with a basic API related to Kawasaki. It retrieves and showcases information about the selected item while intelligently filtering out any duplicates from the API.",
+        "HomeMart is a sleek e-commerce site crafted using Next.js, TypeScript, DaisyUI, Prisma, MongoDB, and Tailwind. This project serves as a hands-on exploration to enhance my skills, with a particular focus on Next.js—a powerful framework for building efficient web applications. This endeavor reflects my ongoing commitment to staying abreast of the latest developments in web development and contributing to its dynamic landscape.",
       challenges: "",
       learned: "",
-      projectLink: "https://kevetic.github.io/moto-page/#/Landing",
-      github: "https://github.com/Kevetic/moto-page",
+      projectLink: "https://homemart.vercel.app/",
+      github: "https://github.com/Kevetic/homeMart",
     },
   ];
   return (
