@@ -23,10 +23,9 @@ const renderSummary = ({ defaultState }) => {
           transition={{ duration: 5 }}
           className="text-left md:text-base about-text text-xs overflow-y-scroll md:overflow-hidden h-48 md:h-fit bg-transparent about-me"
         >
-          With over 4 years of professional experience, I am a{" "}
-          <span>dedicated</span> developer specializing in front-end development
-          with a strong emphasis on React and related libraries. My passion lies
-          in staying on top of new technologies and continuously building{" "}
+          <span>Dedicated</span> developer specializing in the front-end with a
+          strong emphasis on React and related libraries. My passion lies in
+          staying on top of new technologies and continuously building{" "}
           <span>innovative</span> solutions. Fueled by
           <span> determination</span> and a love for learning, I bring{" "}
           <span>creativity</span> to my work, leveraging it to enhance user
