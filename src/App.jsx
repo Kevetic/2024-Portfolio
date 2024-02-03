@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import Nav from "./components/Nav/Nav";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaArrowCircleLeft, FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { motion } from "framer-motion";
 import "./App.css";
@@ -17,19 +17,29 @@ const defaultState = {
   },
 };
 
-const navigation = [
-  { id: 1, title: "About Me", linkTitle: "About Me" },
-  { id: 3, title: "QPS", linkTitle: "Quinns Plastic Surgery" },
-  { id: 4, title: "M48", linkTitle: "Make 48 Challenge" },
-  { id: 2, title: "Personals", linkTitle: "Projects" },
-];
-
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
   return (
-    <motion.div className="bg-background">
-      {isLoading ? (
+    <motion.div
+      className="h-screen w-screen justify-center items-center"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 2 }}
+    >
+      <h1 className="flex justify-center items-center h-screen gap-1">
+        <span>
+          I apologize for any inconvenience; my portfolio has been moved to this
+          new
+        </span>
+        <span>
+          <a
+            href="https://kevetic.vercel.app/"
+            className="underline flex items-center gap-2"
+          >
+            location. <FaArrowCircleLeft />
+          </a>
+        </span>
+      </h1>
+      {/* {isLoading ? (
         <Preloader setIsLoading={setIsLoading} defaultState={defaultState} />
       ) : (
         <>
@@ -46,7 +56,7 @@ export default function App() {
           </div>
           <Nav defaultState={defaultState} navigation={navigation} />
         </>
-      )}
+      )} */}
     </motion.div>
   );
 }
